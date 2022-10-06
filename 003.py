@@ -3,12 +3,12 @@
 # ВАЖНО: если число целое, то оно не имеет дробной части и засчитывать 0 как минимальное не стоит
 # Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-ListFirst = [1.1, 1.2, 3.1, 5, 10.01]
-
+#ListFirst = [1.1, 1.2, 3.1, 5, 10.01]
+ListFirst = list(map(float, input("Введите число через пробел:\n").split()))
 ListA = []
 
 for i in range(len(ListFirst)):
     if ListFirst[i] % 1 != 0:
         ListA.append(round(ListFirst[i] % 1, 2))
 
-print(F"{ListFirst} разницу между max и min значением дробной части элементов = {max(ListA) - min(ListA)}")
+print(F"{ListA} разницу между max и min значением дробной части элементов = {max(ListA) - min(ListA)}")
